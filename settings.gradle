@@ -1,0 +1,4 @@
+rootProject.name = 'scrumpokerlive'
+include 'spl-backend'
+include 'spl-frontend'
+
