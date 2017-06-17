@@ -13,8 +13,8 @@ public class VoteRestServices {
 
     @RequestMapping(value = "vote", method = RequestMethod.GET)
     @ResponseBody
-    public String ddreceiveVote() {
-        return "vote get method called";
+    public String getVote() {
+        return "vote get method called ";
     }
 
     @RequestMapping(value = "vote", method = RequestMethod.POST)
