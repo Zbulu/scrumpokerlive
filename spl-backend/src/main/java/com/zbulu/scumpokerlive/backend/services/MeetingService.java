@@ -4,12 +4,14 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.zbulu.scumpokerlive.backend.model.Meeting;
+
 @Service
 public class MeetingService {
 
-    public String initiateMeeting(String meetingName) {
+    public Meeting initiateMeeting(String meetingName) {
         //todo meeting initialization
-        return meetingName;
+        return new Meeting(meetingName);
     }
 
 
