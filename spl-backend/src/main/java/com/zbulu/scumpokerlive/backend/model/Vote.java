@@ -3,7 +3,7 @@ package com.zbulu.scumpokerlive.backend.model;
 public class Vote {
     private int value;
     private String name;
-    private String meetingCode;
+    private Meeting Meeting;
 
     int getValue() {
         return value;
@@ -21,11 +21,4 @@ public class Vote {
         this.name = name;
     }
 
-    String getMeetingCode() {
-        return meetingCode;
-    }
-
-    void setMeetingCode(String meetingCode) {
-        this.meetingCode = meetingCode;
-    }
 }
