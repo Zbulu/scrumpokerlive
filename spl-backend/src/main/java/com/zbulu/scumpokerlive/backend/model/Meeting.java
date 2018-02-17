@@ -16,8 +16,10 @@ public class Meeting {
         this.lastActivity = LocalTime.now();
     }
 
-    public void joinMeeting(String personName) {
-        this.attendees.add(new Person(personName));
+    public Person joinMeeting(String personName) {
+        Person newAttendee = new Person(personName);
+        this.attendees.add(newAttendee);
+        return newAttendee;
     }
 
     public void leaveMeeting(Person person) {

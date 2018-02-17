@@ -28,13 +28,12 @@ public class MeetingServiceImpl implements MeetingService {
     }
 
     @Override
-    public void joinMeeting(String meetingName, String personName) {
-        this.activeMeetings.get(meetingName).joinMeeting(personName);
+    public Person joinMeeting(String meetingName, String personName) {
+        return this.getMeeting(meetingName).joinMeeting(personName);
     }
 
     @Override
     public void leaveMeeting(String meetingName, Person person) {
-        this.activeMeetings.get(meetingName).leaveMeeting(person);
+        this.getMeeting(meetingName).leaveMeeting(person);
     }
-
 }

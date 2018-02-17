@@ -11,7 +11,7 @@ public interface MeetingService {
 
     void closeMeeting(String meetingName);
 
-    void joinMeeting(String meetingName, String personName);
+    Person joinMeeting(String meetingName, String personName);
 
     void leaveMeeting(String meetingName, Person person);
 }
