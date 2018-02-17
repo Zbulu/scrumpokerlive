@@ -11,6 +11,11 @@ public class Person {
         id = UUID.randomUUID().toString();
     }
 
+    Person(String name, String id) {
+        this.name = name;
+        this.id = id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
