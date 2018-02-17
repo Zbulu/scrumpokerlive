@@ -1,18 +1,17 @@
 package com.zbulu.scumpokerlive.backend.services;
 
-import java.util.Optional;
-
-import org.springframework.stereotype.Service;
-
 import com.zbulu.scumpokerlive.backend.model.Meeting;
+import com.zbulu.scumpokerlive.backend.model.Person;
 
-@Service
-public class MeetingService {
+public interface MeetingService {
 
-    public Meeting initiateMeeting(String meetingName) {
-        //todo meeting initialization
-        return new Meeting(meetingName);
-    }
+    Meeting initializeMeeting(String meetingName);
 
+    Meeting getMeeting(String meetingName);
 
+    void closeMeeting(String meetingName);
+
+    void joinMeeting(String meetingName, String personName);
+
+    void leaveMeeting(String meetingName, Person person);
 }
