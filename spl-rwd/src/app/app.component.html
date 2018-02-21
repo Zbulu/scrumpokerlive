@@ -1,20 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
     Welcome to {{title}}!
   </h1>
 </div>
-<h2>Enter meeting name</h2>
-<form >
-  <input name="meetingName" />
+<h2>Please enter details</h2>
+<form action="/api/meet" method="post">
+  <input [(ngModel)]="meetingName" name="meetingName" placeholder="meeting name"/>
+  <input [(ngModel)]="personName" name="personName" placeholder="your name"/>
 </form>
 <ul class="spl-top-menu">
-  Top menu
-  <button>
-    <h2><a data-onclick="startMeeting" target="_blank" href="https://angular.io/tutorial">Start meeting</a></h2>
+  <button (click)="startMeeting()">
+    <h2>Start meeting</h2>
   </button>
-  <button>
-    <h2><a data-onclick="joinMeeting" target="_blank" href="https://github.com/angular/angular-cli/wiki">Join meeting</a></h2>
+  <button (click)="joinMeeting()">
+    <h2>Join meeting</h2>
   </button>
 </ul>
 
