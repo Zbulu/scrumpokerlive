@@ -47,6 +47,7 @@ public class MeetingServiceImplTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void closeMeeting() throws Exception {
         // given
         this.setMeetings();
@@ -60,6 +61,7 @@ public class MeetingServiceImplTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void joinMeeting() throws Exception {
         // given
         this.setMeetings();
@@ -72,6 +74,7 @@ public class MeetingServiceImplTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void leaveMeeting() throws Exception {
         // given
         this.setMeetings();

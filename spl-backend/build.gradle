@@ -1,7 +1,22 @@
 group 'com.zbulu'
 version '1.0-SNAPSHOT'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE")
+    }
+}
 
 apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = "scrum-poker-live"
+    version = "1.0-SNAPSHOT"
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -13,10 +28,13 @@ repositories {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:1.5.10.RELEASE")
     compile group: 'com.google.guava', name: 'guava', version: '23.0'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.4'
+
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.4'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.4'
     testCompile group: 'org.testng', name: 'testng', version: '6.14.2'
-    // https://mvnrepository.com/artifact/org.jmockit/jmockit
     testCompile group: 'org.jmockit', name: 'jmockit', version: '1.38'
-    // https://mvnrepository.com/artifact/org.assertj/assertj-core
     testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.0'
 
 
