@@ -1,6 +1,6 @@
-import {Injectable} from "@angular/core";
-import {HttpClient, HttpParams} from "@angular/common/http";
-import {Person} from "../model/person";
+import { HttpClient, HttpParams } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Person } from "../model/person";
 
 @Injectable()
 export class MeetingService {
@@ -11,20 +11,20 @@ export class MeetingService {
 
   startMeeting(meetingName: string, personName: string) {
     this.http.post<Person>(this.url, new StartMeetingRequest(meetingName, personName))
-      .subscribe(
-        (response: Person) => console.log("name: " + response.name + ", id: " + response.id)
-      );
+        .subscribe(
+            (response: Person) => console.log("name: " + response.name + ", id: " + response.id)
+        );
   }
 
   joinMeeting(meetingName: string, personName: string) {
     let httpParams = new HttpParams()
-      .append("meetingName", meetingName)
-      .append("personName", personName);
+        .append("meetingName", meetingName)
+        .append("personName", personName);
 
     this.http.get<Person>(this.url, {params: httpParams})
-      .subscribe(
-        (response: Person) => console.log("get: " + response.name + ", id: " + response.id)
-      );
+        .subscribe(
+            (response: Person) => console.log("get: " + response.name + ", id: " + response.id)
+        );
   }
 }
 

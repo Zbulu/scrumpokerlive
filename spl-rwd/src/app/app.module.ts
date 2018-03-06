@@ -1,11 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
+import { MeetingService } from "./service/meeting.service";
 import { RestService } from "./service/rest.service";
-import {HttpClientModule} from "@angular/common/http";
-import {MeetingService} from "./service/meeting.service";
-import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,4 +17,5 @@ import {FormsModule} from "@angular/forms";
   providers: [RestService, MeetingService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
