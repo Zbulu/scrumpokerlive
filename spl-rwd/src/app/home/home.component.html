@@ -1,0 +1,13 @@
+<h2>Please enter details</h2>
+<form action="/api/meet" method="post">
+  <input [(ngModel)]="meetingName" name="meetingName" placeholder="meeting name"/>
+  <input [(ngModel)]="personName" name="personName" placeholder="your name"/>
+</form>
+<ul class="spl-top-menu">
+  <button (click)="startMeeting()">
+    <h2>Start meeting</h2>
+  </button>
+  <button (click)="joinMeeting()">
+    <h2>Join meeting</h2>
+  </button>
+</ul>
