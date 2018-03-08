@@ -10,7 +10,8 @@ import { HomeComponent } from "./home/home.component";
 import { MeetingComponent } from "./meeting/meeting.component";
 import { NavBarComponent } from "./navbar/navBar.component";
 import { NotFoundComponent } from "./notFound.component";
-import { MeetingService } from "./service/meeting.service";
+import { MeetingRestService } from "./service/meeting.restService";
+import { MeetingService } from "./service/meetingService";
 import { RestService } from "./service/rest.service";
 
 @NgModule({
@@ -20,7 +21,7 @@ import { RestService } from "./service/rest.service";
   imports: [
     AppRoutingModule, BrowserModule, FormsModule, HttpClientModule
   ],
-  providers: [RestService, MeetingService],
+  providers: [RestService, MeetingService, MeetingRestService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
