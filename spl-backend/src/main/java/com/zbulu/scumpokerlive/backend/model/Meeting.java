@@ -22,6 +22,14 @@ public class Meeting {
         return newAttendee;
     }
 
+    public void joinMeeting(Person person) {
+        if (this.attendees.contains(person)) {
+            throw new RuntimeException("Cannot join meeting for a second time");
+        } else {
+            this.attendees.add(person);
+        }
+    }
+
     public void leaveMeeting(Person person) {
         this.attendees.remove(person);
     }
